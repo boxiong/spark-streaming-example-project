@@ -21,11 +21,10 @@ object Dependencies {
 
   object V {
     // Java
-    val awsSdk               = "1.9.34"
+    val awsSdk               = "1.11.95"
     val awsKinesisConnectors = "1.1.1"
     // Scala
     val spark                = "1.3.0"
-    val argot                = "1.0.3"
     // Add versions for your additional libraries here...
     // Scala (test)
     val specs2               = "1.13"
@@ -40,8 +39,12 @@ object Dependencies {
     val awsSdkCore            = "com.amazonaws"    % "aws-java-sdk-core"            % V.awsSdk
     val awsKinesisConnectors  = "com.amazonaws"    % "amazon-kinesis-connectors"    % V.awsKinesisConnectors
 
+    val awsKinesisClient  = "com.amazonaws"    % "amazon-kinesis-client"    % "1.7.2"
+    val jacksonCore  = "com.fasterxml.jackson.core"    % "jackson-core"    % "2.7.9"
+    val jacksonCbor  = "com.fasterxml.jackson.dataformat"    % "jackson-dataformat-cbor"    % "2.7.9"
+
+
     // Scala
-    val argot                 = "org.clapper"      %% "argot"                       % V.argot
     val sparkCore             = "org.apache.spark" %% "spark-core"                  % V.spark
     val sparkStreaming        = "org.apache.spark" %% "spark-streaming"             % V.spark
     val sparkStreamingKinesis = "org.apache.spark" %% "spark-streaming-kinesis-asl" % V.spark

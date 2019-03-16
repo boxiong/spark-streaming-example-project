@@ -133,6 +133,8 @@ Now we build our application. This should take closer to 10 minutes:
 
 ```bash
 $ inv build_project
+
+> sbt assembly
 ...
 ```
 
@@ -140,6 +142,8 @@ Finally we can submit our job to Spark with this command:
 
 ```bash
 $ inv run_project config/config.hocon.sample
+
+> ./spark-master/bin/spark-submit --class com.snowplowanalytics.spark.streaming.StreamingCountsApp --master local ./target/scala-2.11/spark-streaming-example-project-0.1.0.jar
 ...
 ```
 

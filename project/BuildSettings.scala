@@ -20,7 +20,7 @@ object BuildSettings {
     organization  := "com.snowplowanalytics",
     version       := "0.1.0",
     description   := "A Spark Streaming job reading events from Amazon Kinesis and writing event counts to DynamoDB",
-    scalaVersion  := "2.10.4",
+    scalaVersion  := "2.11.8",
     scalacOptions :=  Seq("-deprecation", "-encoding", "utf8",
                           "-feature", "-target:jvm-1.7"),
     scalacOptions in Test :=  Seq("-Yrangepos"),
@@ -76,7 +76,7 @@ object BuildSettings {
         case x if x.endsWith("project.clj") => MergeStrategy.discard // Leiningen build files
         case x if x.startsWith("META-INF") => MergeStrategy.discard // More bumf
         case x if x.endsWith(".html") => MergeStrategy.discard
-        case x => old(x)
+        case x => MergeStrategy.first
       }
     }
   )

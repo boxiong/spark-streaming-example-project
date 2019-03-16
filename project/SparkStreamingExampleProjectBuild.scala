@@ -31,11 +31,17 @@ object SparkStreamingExampleProjectBuild extends Build {
         Libraries.awsSdk,
         Libraries.awsSdkCore,
         Libraries.awsKinesisConnectors,
-        Libraries.argot,
         Libraries.sparkCore,
         Libraries.sparkStreaming,
         Libraries.sparkStreamingKinesis,
         Libraries.specs2
+      )
+    )
+    .settings(
+      dependencyOverrides ++= Set(
+        Libraries.awsKinesisClient,
+        Libraries.jacksonCore,
+        Libraries.jacksonCbor
       )
     )
 }
