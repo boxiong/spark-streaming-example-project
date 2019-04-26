@@ -19,13 +19,3 @@ __pycache__/
 # Vagrant
 .vagrant
 
-*.class
-*.log
-
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
-
-# Spark build
-master.zip
-spark-master/
